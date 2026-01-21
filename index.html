@@ -1,171 +1,159 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>청화방역 | 24시간 방역 전문</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="청화방역 - 해충방역, 소독, 살균, 정기방역 전문업체">
+  <meta charset="UTF-8">
+  <title>청화방역</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #222;
-    }
-
-    /* 상단 이미지 영역 */
-    .hero {
-      background-image: url("hero1.jpg");
-      background-size: cover;
-      background-position: center;
-      min-height: 480px;
-      position: relative;
-    }
-
-    .hero-overlay {
-      background: rgba(0, 0, 0, 0.45);
-      color: #fff;
-      height: 100%;
-      padding: 90px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      margin: 5px 0;
-      font-size: 1.1rem;
-    }
-
-    .btn-area {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 14px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #fff;
-      background: #1abc9c;
-    }
-
-    .btn.kakao {
-      background: #fee500;
-      color: #3c1e1e;
+      line-height: 1.6;
+      color: #333;
     }
 
     section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
 
-    .grid {
+    .section-desc {
+      text-align: center;
+      color: #666;
+      margin-bottom: 50px;
+    }
+
+    /* ===== 카드형 서비스 섹션 ===== */
+    .card-section {
+      background: #fafafa;
+    }
+
+    .card-wrap {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .box {
-      border: 1px solid #eee;
-      padding: 25px;
-      border-radius: 10px;
-      text-align: center;
+    .card {
       background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.3s;
     }
 
-    .contact {
-      background: #f7f7f7;
-      text-align: center;
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
 
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
       padding: 20px;
-      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- 상단 이미지 + 제목 -->
-  <header class="hero">
-    <div class="hero-overlay">
-      <h1>청화방역</h1>
-      <p>해충 · 소독 · 살균 · 정기방역 전문</p>
-      <p><strong>24시간 상담 가능</strong></p>
-
-      <div class="btn-area">
-        <a href="tel:01045272402" class="btn">전화상담하기</a>
-        <a href="https://open.kakao.com/o/s6E4NGci" target="_blank" class="btn kakao">
-          카카오톡 상담하기
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- 선택 이유 -->
+  <!-- 청화방역 선택 이유 -->
   <section>
     <h2>청화방역이 선택받는 이유</h2>
-    <div class="grid">
-      <div class="box">
-        <h3>신속 출동</h3>
-        <p>문의 즉시 빠른 대응</p>
-      </div>
-      <div class="box">
-        <h3>안전한 약품</h3>
-        <p>인체 무해 친환경 약품 사용</p>
-      </div>
-      <div class="box">
-        <h3>정기 관리</h3>
-        <p>사업장 맞춤 방역 솔루션</p>
-      </div>
-    </div>
+    <p class="section-desc">
+      특수청소는 누구나 할 수 있는 일이 아닙니다.<br>
+      경험과 노하우를 갖춘 전문팀이 직접 작업합니다.
+    </p>
   </section>
 
-  <!-- 서비스 -->
-  <section>
-    <h2>방역 서비스</h2>
-    <div class="grid">
-      <div class="box">해충 방역</div>
-      <div class="box">소독 · 살균</div>
-      <div class="box">정기 방역 관리</div>
+  <!-- 방역 서비스 카드 섹션 -->
+  <section class="card-section">
+    <h2>청화방역 전문 서비스</h2>
+    <p class="section-desc">
+      현장 상황에 맞춘 맞춤형 방역 · 특수청소 솔루션
+    </p>
+
+    <div class="card-wrap">
+
+      <div class="card">
+        <img src="service1.jpg" alt="고독사 청소">
+        <div class="card-content">
+          <h3>CLEANING SERVICE 01.</h3>
+          <p>
+            고독사 · 유품정리<br>
+            오염 제거 · 살균 · 방역까지 완벽 처리
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="service2.jpg" alt="쓰레기집 청소">
+        <div class="card-content">
+          <h3>CLEANING SERVICE 02.</h3>
+          <p>
+            쓰레기집 청소<br>
+            악취 제거 및 원상 복구
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="service3.jpg" alt="공장 방역">
+        <div class="card-content">
+          <h3>CLEANING SERVICE 03.</h3>
+          <p>
+            공장 · 창고 · 상가<br>
+            기름때 · 세균 · 곰팡이 제거
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="service4.jpg" alt="화재 현장 청소">
+        <div class="card-content">
+          <h3>CLEANING SERVICE 04.</h3>
+          <p>
+            화재 현장 청소<br>
+            그을음 · 유해물질 · 냄새 제거
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="service5.jpg" alt="반려동물 냄새 제거">
+        <div class="card-content">
+          <h3>CLEANING SERVICE 05.</h3>
+          <p>
+            반려동물 냄새 제거<br>
+            털 · 배설물 · 악취 완벽 제거
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
-
-  <!-- 문의 -->
-  <section class="contact">
-    <h2>문의 및 상담</h2>
-    <p>📞 010-4527-2402</p>
-    <p>⏰ 상담시간 : 24시간</p>
-
-    <div class="btn-area">
-      <a href="tel:01045272402" class="btn">전화하기</a>
-      <a href="https://open.kakao.com/o/s6E4NGci" target="_blank" class="btn kakao">
-        카카오톡 상담
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    © 청화방역 | 24시간 방역 전문
-  </footer>
 
 </body>
 </html>
