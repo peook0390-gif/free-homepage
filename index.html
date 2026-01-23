@@ -100,7 +100,9 @@
 
     <div class="btn-group">
       <a href="tel:01045272402" class="btn btn-call">전화상담하기</a>
-      <a href="#" class="btn btn-kakao">카카오톡 상담하기</a>
+      <a href="#" class="btn btn-kakao" onclick="openKakao(); return false;">
+        카카오톡 상담하기
+      </a>
     </div>
   </section>
 
@@ -156,9 +158,27 @@
 
     <div class="btn-group">
       <a href="tel:01045272402" class="btn btn-call">전화하기</a>
-      <a href="#" class="btn btn-kakao">카카오톡 상담</a>
+      <a href="#" class="btn btn-kakao" onclick="openKakao(); return false;">
+        카카오톡 상담
+      </a>
     </div>
   </section>
+
+  <!-- ✅ 카카오톡 오픈채팅 바로 연결 스크립트 -->
+  <script>
+    function openKakao() {
+      const kakaoUrl = "https://open.kakao.com/o/s6E4NGci";
+      const userAgent = navigator.userAgent.toLowerCase();
+
+      if (/iphone|ipad|android/.test(userAgent)) {
+        // 모바일 → 카카오톡 앱 or 웹
+        window.location.href = kakaoUrl;
+      } else {
+        // PC → 새 창
+        window.open(kakaoUrl, "_blank");
+      }
+    }
+  </script>
 
 </body>
 </html>
